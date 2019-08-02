@@ -1,0 +1,39 @@
+.content {
+
+    
+    .blog {
+
+        h1 {
+            text-align: center;
+        }
+    
+        a {
+            cursor: pointer;
+            
+            h3 {
+                color: hsl(0, 0%, 25%);
+                font-size: 2em;
+                margin-bottom: 0;
+                margin-top: 1em;
+
+                &:hover {
+                    opacity: .8;
+                }
+            }
+        }
+
+        sub {
+            font-size: .7em;
+            margin-bottom: 8em;
+            font-weight: bold;
+
+        }
+
+        p {
+            cursor: pointer;
+            margin-top: 1em;
+            cursor: pointer;
+
+        }
+    }
+}

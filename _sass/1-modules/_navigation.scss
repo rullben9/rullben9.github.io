@@ -1,0 +1,206 @@
+#navigationMenu {
+    position: relative;
+    animation: fade-down .15s normal;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    transform: translateY(60px);
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+nav {
+    height: 8.5em;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+
+    .logo {
+        width: 45px;
+        height: 45px;
+        display: inline-block;
+        vertical-align: middle;
+        overflow: visible;
+        border: 5px solid #494c4e;
+        position: relative;
+        transform: rotate(0deg);
+        transition: transform .4s ease-in-out;
+        margin-left: 2em;
+        text-align: center;
+        line-height: .5in;
+
+        &:hover {
+            opacity: 1;
+            transform: rotate(-180deg);
+            transition: transform .4s ease-in-out;
+        }
+
+        .logo__text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(0deg);
+            transition: transform .4s ease-in-out;
+            font-weight: bold;
+            font-size: 13px;
+            height: 120%;
+            width: 120%;
+            color: #494c4e;
+
+            &:hover {
+                transform: translate(-50%, -50%) rotate(180deg);
+                transform-origin: center;
+            }
+        }
+    }
+
+
+    #wrapper {
+        display: inline-block;
+        border-radius: 500px;
+        margin-right: 2em;
+        position: relative;
+        cursor: pointer;
+    }
+
+    ul {
+        display: none;
+    }
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.line {
+    position: absolute;
+    height: 5px; 
+    width: 90%;
+    background:#494c4e;;
+    border-radius: 8px;
+    transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.35s;
+}
+
+.top {
+    top: 18%;
+}
+
+.middle {
+    top: 48%;
+}
+
+.bottom {
+    top: 78%;
+}
+
+.icon.close .top {
+    transform: rotate(45deg);
+    top: 48%;
+}
+
+.icon.close .middle, .icon.close .bottom {
+    transform: rotate(-45deg);
+    top: 48%;
+}
+
+
+.box {
+    display: none;
+    height: 20em;
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+
+    ul {
+        height: 80%;
+        width: 60%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        li {
+            list-style-type: none;
+
+            a {
+                color: #3f3f3f;
+                display: flex;
+                align-items: center;
+
+                svg {
+                    height: 18px !important;
+                    width: auto;
+                    margin-right: .3em;
+                    fill: #3f3f3f;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint(phablet) {
+    nav {
+
+        #wrapper {
+            display: none;
+        }
+
+        ul {
+            padding-top: 1.5em;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 2em;  
+
+            li {
+                list-style-type: none;
+                float: left;
+
+                a {
+                    display: block; 
+                    text-decoration: none;
+                    color: #000000;
+                    font-size: 16px;
+                    font-weight: normal;
+                    margin: 0 .6em;
+                    font-family: 'Crimson Text', serif;        
+
+                    &:hover {
+                        border-bottom: 2px solid #074866;
+                        text-decoration: none;
+                    }
+
+                    svg {
+                        height: 18px;
+                        width: auto !important;
+                    }
+                }
+
+                .icon {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint(laptop) {
+    nav {
+
+        ul {
+            
+
+            li {
+
+
+                a {
+                    margin: 0 1em;
+                }
+            }
+        }
+    }
+}
+

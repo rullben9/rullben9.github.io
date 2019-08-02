@@ -1,0 +1,91 @@
+.content {
+    max-width: 1170px;
+    width: auto;
+    margin: 0 auto;
+    padding-top: 2em;
+
+    .projects {
+        margin: 3em auto 5em auto;
+
+        h1 {
+            font-size: 34px;
+            font-weight: 600;
+            color: #3d3d3d;
+            font-family: 'Crimson Text', serif;
+            text-align: center;
+            margin-bottom: 1em;
+        }
+
+        p {
+            width: -moz-max-content;
+            width: max-content;
+            margin: 0 auto;
+            margin-top: 1em;
+            color: #3d3d3d;
+            font-weight: bold;
+            letter-spacing: .5px;
+
+
+            svg {
+                height: 1.2em;
+                width: auto;
+                fill: #074866;
+                margin: 0 1em;
+            }
+        }
+    }    
+
+    form {  
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: auto;
+        margin-right: auto;
+
+        input {
+            padding: 1em;
+            margin: 1em auto;
+            border: 2px solid #3d3d3d;
+            max-width: 345em;
+            min-width: 200px;
+            width: 80%;
+
+            &::placeholder {
+                font-family: 'Crimson Text', serif !important;
+            } 
+        }
+
+        textarea {
+            padding: 1em;
+            margin: 1em auto;
+            border: 2px solid #3d3d3d;
+            margin: 1em auto;
+            min-height: 220px;
+            width: 80%;
+
+            &::placeholder {
+                font-family: 'Crimson Text', serif !important;
+            }        
+        }
+
+        button {
+            padding: .7em;
+            width: 110px;
+            margin: 1em auto;
+            border: 0;
+            background: #074866;
+            color: #ffffff;
+            font-weight: 600;
+        }
+    }    
+}
+
+#cta {
+    position: relative;
+    animation: fade-in 1s normal;
+    animation-delay: 1.2s;
+    animation-iteration-count: 1;
+    transform: translateY(20px);
+    opacity: 0;
+    animation-fill-mode: forwards;
+}

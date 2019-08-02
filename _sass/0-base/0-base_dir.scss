@@ -1,0 +1,88 @@
+@mixin breakpoint($point) {
+    @if $point == desktop {
+      @media (min-width: 1200px) { @content ; }
+   }
+    @else if $point == laptop {
+      @media (min-width: 992px) { @content ; }
+   }
+     @else if $point == tablet {
+      @media (min-width: 768px) { @content ; }
+   }
+   @else if $point == phablet {
+    @media (min-width: 500px) { @content ; }
+ }
+}
+
+body {
+   margin: 0;
+   padding: 0;
+   opacity: 1;
+   transition: 1.7s opacity;
+   border: 8px solid #3f3f3f;
+}
+
+body.fade {
+   opacity: 0;
+   transition: none;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+.inner-container {
+   max-width: 50em;
+   margin-left: auto;
+   margin-right: auto;
+   padding-left: 2em;
+   padding-right: 2em;
+}
+
+p {
+   font-family: 'Crimson Text', serif !important;
+}
+
+a:visited {
+   color: #3f3f3f;
+}
+
+h1,h2,h3,h4,h5,h6 {
+   font-family: 'Crimson Text', serif !important;
+   font-weight: 600;
+   color: #414141;
+}
+
+p {
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+}
+
+.page-content {
+   .wrapper {
+      padding-left: 2em !important;
+      padding-right: 2em !important;
+      max-width: 800px;
+   }
+}
+
+@keyframes fade-down {
+   from {
+       transform: translateY(-20px)
+   }
+
+   to {
+       transform: translateY(0);
+       opacity: 1;
+   }
+}
+
+@keyframes fade-in {
+   from {
+
+   }
+
+   to {
+       transform: translateY(0);
+       opacity: 1;
+   }
+}

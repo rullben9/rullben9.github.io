@@ -1,0 +1,19 @@
+#postTitle {
+    position: relative;
+    animation: fade-in 1s normal;
+    animation-delay: .6s;
+    animation-iteration-count: 1;
+    transform: translateY(20px);
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+#mainContent {
+    position: relative;
+    animation: fade-in 1s normal;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    transform: translateY(60px);
+    opacity: 0;
+    animation-fill-mode: forwards;
+}

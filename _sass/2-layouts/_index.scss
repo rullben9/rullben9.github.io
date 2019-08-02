@@ -1,0 +1,89 @@
+.content {
+    max-width: 1170px;
+    width: auto;
+    margin: 0 auto;
+    padding-top: 2em;
+   
+    .showcase {
+        margin: 1.5em auto 3.5em auto;
+
+        h1 {
+            font-size: 32px;
+            font-weight: 600;
+            color: rgb(65, 65, 65);
+            font-family: 'Crimson Text', serif;
+        }
+    }
+
+    .portfolio {
+        border: 0;
+        a {
+            background: #074866;
+            color: #fff;
+        }
+    }
+
+    .image {
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 2em;
+        padding-right: 2em;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin-bottom: 2em;
+            background-color: #f0eeee;
+        }
+    }
+
+    .about {
+        padding-top: 2em;
+        padding-bottom: 4em;
+
+        h3 {
+            color: rgb(61, 61, 61);            
+            margin: 1em 0;
+            font-weight: 700;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+            &:nth-child(2n) {
+                margin-top: 2em;
+            }
+        }
+
+        h2 {
+            font-size: 14px;
+            margin: 1.5em 0;
+            color: #074866;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+        
+        p {
+            line-height: 1.6em;
+            color: rgb(95, 95, 95);
+            font-size: 17px;
+
+            &:nth-child(2n){
+                margin-bottom: 2em;
+            }
+
+            a {
+                color: #074866;
+            }
+        }
+    }
+}
+
+#mainContent {
+    position: relative;
+    animation: fade-in 1s normal;
+    animation-delay: .6s;
+    animation-iteration-count: 1;
+    transform: translateY(20px);
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
